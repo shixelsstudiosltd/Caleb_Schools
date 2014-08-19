@@ -1,0 +1,81 @@
+2014/08/19 11:22:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "messages".' in C:\wamp\apps\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\apps\yii\web\CWebApplication.php(141): CWebApplication->runController('messages')
+#1 C:\wamp\apps\yii\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\caleb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/caleb/index.php/messages
+---
+2014/08/19 11:22:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "messeges".' in C:\wamp\apps\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\apps\yii\web\CWebApplication.php(141): CWebApplication->runController('messeges')
+#1 C:\wamp\apps\yii\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\caleb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/caleb/index.php/messeges
+---
+2014/08/19 11:22:42 [error] [exception.Exception] exception 'Exception' with message 'Method User::getFullName not defined' in C:\wamp\www\caleb\protected\modules\message\MessageModule.php:33
+Stack trace:
+#0 C:\wamp\apps\yii\base\CModule.php(90): MessageModule->init()
+#1 C:\wamp\apps\yii\YiiBase.php(206): CModule->__construct('message', NULL, Array)
+#2 C:\wamp\apps\yii\base\CModule.php(282): YiiBase::createComponent('message.Message...', 'message', NULL, Array)
+#3 C:\wamp\apps\yii\web\CWebApplication.php(337): CModule->getModule('message')
+#4 C:\wamp\apps\yii\web\CWebApplication.php(276): CWebApplication->createController('message')
+#5 C:\wamp\apps\yii\web\CWebApplication.php(141): CWebApplication->runController('message')
+#6 C:\wamp\apps\yii\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\caleb\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/caleb/index.php/message
+---
+2014/08/19 11:26:44 [error] [exception.Exception] exception 'Exception' with message 'Method User::getFullName not defined' in C:\wamp\www\caleb\protected\modules\message\MessageModule.php:33
+Stack trace:
+#0 C:\wamp\apps\yii\base\CModule.php(90): MessageModule->init()
+#1 C:\wamp\apps\yii\YiiBase.php(206): CModule->__construct('message', NULL, Array)
+#2 C:\wamp\apps\yii\base\CModule.php(282): YiiBase::createComponent('message.Message...', 'message', NULL, Array)
+#3 C:\wamp\apps\yii\web\CWebApplication.php(337): CModule->getModule('message')
+#4 C:\wamp\apps\yii\web\CWebApplication.php(276): CWebApplication->createController('message')
+#5 C:\wamp\apps\yii\web\CWebApplication.php(141): CWebApplication->runController('message')
+#6 C:\wamp\apps\yii\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\caleb\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/caleb/index.php/message
+---
+2014/08/19 11:27:33 [error] [exception.Exception] exception 'Exception' with message 'Method User::getFullName not defined' in C:\wamp\www\caleb\protected\modules\message\MessageModule.php:33
+Stack trace:
+#0 C:\wamp\apps\yii\base\CModule.php(90): MessageModule->init()
+#1 C:\wamp\apps\yii\YiiBase.php(206): CModule->__construct('message', NULL, Array)
+#2 C:\wamp\apps\yii\base\CModule.php(282): YiiBase::createComponent('message.Message...', 'message', NULL, Array)
+#3 C:\wamp\apps\yii\web\CWebApplication.php(337): CModule->getModule('message')
+#4 C:\wamp\apps\yii\web\CWebApplication.php(276): CWebApplication->createController('message')
+#5 C:\wamp\apps\yii\web\CWebApplication.php(141): CWebApplication->runController('message')
+#6 C:\wamp\apps\yii\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\caleb\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/caleb/index.php/message
+---
+2014/08/19 11:28:45 [error] [exception.Exception] exception 'Exception' with message 'Property MessageModule::getNameMethod not defined' in C:\wamp\www\caleb\protected\modules\message\MessageModule.php:29
+Stack trace:
+#0 C:\wamp\apps\yii\base\CModule.php(90): MessageModule->init()
+#1 C:\wamp\apps\yii\YiiBase.php(206): CModule->__construct('message', NULL, Array)
+#2 C:\wamp\apps\yii\base\CModule.php(282): YiiBase::createComponent('message.Message...', 'message', NULL, Array)
+#3 C:\wamp\apps\yii\web\CWebApplication.php(337): CModule->getModule('message')
+#4 C:\wamp\apps\yii\web\CWebApplication.php(276): CWebApplication->createController('message')
+#5 C:\wamp\apps\yii\web\CWebApplication.php(141): CWebApplication->runController('message')
+#6 C:\wamp\apps\yii\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\caleb\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/caleb/index.php/message
+---
+2014/08/19 11:29:01 [error] [exception.Exception] exception 'Exception' with message 'Method User::getFullName not defined' in C:\wamp\www\caleb\protected\modules\message\MessageModule.php:33
+Stack trace:
+#0 C:\wamp\apps\yii\base\CModule.php(90): MessageModule->init()
+#1 C:\wamp\apps\yii\YiiBase.php(206): CModule->__construct('message', NULL, Array)
+#2 C:\wamp\apps\yii\base\CModule.php(282): YiiBase::createComponent('message.Message...', 'message', NULL, Array)
+#3 C:\wamp\apps\yii\web\CWebApplication.php(337): CModule->getModule('message')
+#4 C:\wamp\apps\yii\web\CWebApplication.php(276): CWebApplication->createController('message')
+#5 C:\wamp\apps\yii\web\CWebApplication.php(141): CWebApplication->runController('message')
+#6 C:\wamp\apps\yii\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\caleb\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/caleb/index.php/message
+---
