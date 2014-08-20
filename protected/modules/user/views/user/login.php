@@ -1,59 +1,55 @@
-<?php
-$this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Login");
-$this->breadcrumbs=array(
-	UserModule::t("Login"),
-);
+<?php 
+    $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Login");
+    $this->layout='//layouts/front'; 
 ?>
 
-<h1><?php echo UserModule::t("Login"); ?></h1>
+<div class="loginpanel">
+    <div class="loginpanelinner">
+        <div class="logo animate0 bounceIn">
+            <img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo.png" alt="" />
+        </div>
+        
+        <?php if(Yii::app()->user->hasFlash('loginMessage')): ?>
+        <div class="success">
+            <?php echo Yii::app()->user->getFlash('loginMessage'); ?>
+        </div>
+        <?php endif; ?>
+        
+        <?php echo CHtml::beginForm(); ?>
+                <?php echo CHtml::errorSummary($model); ?>
+                
+                <div class="inputwrapper animate1 bounceIn">
+                    <?php echo CHtml::activeTextField($model,'username',array('required'=>'required','placeholder'=>'Username')); ?>
+                </div>
 
-<?php if(Yii::app()->user->hasFlash('loginMessage')): ?>
+                <div class="inputwrapper animate2 bounceIn">
+                    <?php echo CHtml::activePasswordField($model,'password',array('required'=>'required','placeholder'=>'Password')); ?>
+                </div>
+                
+                <style>
+                    .p12{width:20px !important;}
+                    .custom
+                </style>
+                <div class="inputwrapper animate3 bounceIn">
+                    <?php echo CHtml::activeCheckBox($model,'rememberMe',array('class'=>'p12')); ?>
+                    <?php echo CHtml::activeLabelEx($model,'rememberMe',array('class'=>'custom-remember-me')); ?>
+                </div>
+                
+                <div class="inputwrapper animate4 bounceIn">
+                    <?php echo CHtml::submitButton(UserModule::t("Login"),array('class'=>'custom-login-btn')); ?>
+                </div>
+                
+                <div class="inputwrapper animate5 bounceIn">
+                    <p class="hint">
+                    <?php echo CHtml::link(UserModule::t("Register"),Yii::app()->getModule('user')->registrationUrl); ?> | <?php echo CHtml::link(UserModule::t("Lost Password?"),Yii::app()->getModule('user')->recoveryUrl); ?>
+                    </p>
+                </div>
+                
+            <?php echo CHtml::endForm(); ?>
+    </div><!--loginpanelinner-->
+</div><!--loginpanel-->
 
-<div class="success">
-	<?php echo Yii::app()->user->getFlash('loginMessage'); ?>
-</div>
-
-<?php endif; ?>
-
-<p><?php echo UserModule::t("Please fill out the following form with your login credentials:"); ?></p>
-
-<div class="form">
-<?php echo CHtml::beginForm(); ?>
-
-	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
-	
-	<?php echo CHtml::errorSummary($model); ?>
-	
-	<div class="row">
-		<?php echo CHtml::activeLabelEx($model,'username'); ?>
-		<?php echo CHtml::activeTextField($model,'username') ?>
-	</div>
-	
-	<div class="row">
-		<?php echo CHtml::activeLabelEx($model,'password'); ?>
-		<?php echo CHtml::activePasswordField($model,'password') ?>
-	</div>
-	
-	<div class="row">
-		<p class="hint">
-		<?php echo CHtml::link(UserModule::t("Register"),Yii::app()->getModule('user')->registrationUrl); ?> | <?php echo CHtml::link(UserModule::t("Lost Password?"),Yii::app()->getModule('user')->recoveryUrl); ?>
-		</p>
-	</div>
-	
-	<div class="row rememberMe">
-		<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
-		<?php echo CHtml::activeLabelEx($model,'rememberMe'); ?>
-	</div>
-
-	<div class="row submit">
-		<?php echo CHtml::submitButton(UserModule::t("Login")); ?>
-	</div>
-	
-<?php echo CHtml::endForm(); ?>
-</div><!-- form -->
-
-
-<?php
+    <?php
 $form = new CForm(array(
     'elements'=>array(
         'username'=>array(

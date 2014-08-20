@@ -1,3 +1,4 @@
+<?php $this->layout='//layouts/front';?>
 <?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Registration");
 $this->breadcrumbs=array(
 	UserModule::t("Registration"),
