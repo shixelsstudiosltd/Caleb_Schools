@@ -77,7 +77,13 @@ return array(
 
 	// application components
 	'components'=>array(
-            'user' => array(  
+            'user' => array( 
+                
+            'class' => 'RWebUser',
+            'behaviors' => array(
+             'WebUserBehavior'
+            ),
+                
             // enable cookie-based authentication
             'allowAutoLogin' => true,
             'class'=>'RWebUser',
@@ -121,7 +127,7 @@ return array(
             // uncomment the following to enable URLs in path-format	
             'urlManager'=>array(
                     'urlFormat'=>'path',
-                    // 'showScriptName' => false,
+                    //'showScriptName' => false,
                     'rules'=>array(
                             // 'site/page/<view:\w+>' => 'site/page/',
                             '<controller:\w+>/<id:\d+>'=>'<controller>/view',
