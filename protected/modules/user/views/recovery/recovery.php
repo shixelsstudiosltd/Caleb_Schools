@@ -1,33 +1,36 @@
-<?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Restore");
-$this->breadcrumbs=array(
-	UserModule::t("Login") => array('/user/login'),
-	UserModule::t("Restore"),
-);
+<?php 
+$this->pageTitle=Yii::app()->name . ' - Recover Password';
+$this->layout = "//layouts/front";
 ?>
 
-<h1><?php echo UserModule::t("Restore"); ?></h1>
 
-<?php if(Yii::app()->user->hasFlash('recoveryMessage')): ?>
-<div class="success">
-<?php echo Yii::app()->user->getFlash('recoveryMessage'); ?>
-</div>
-<?php else: ?>
+<div class="loginpanel">
+    <div class="loginpanelinner">
+        <div class="logo animate0 bounceIn">
+            <img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo.png" alt="" />
+        </div>
+        
+        <?php echo CHtml::beginForm(); ?>
+            <?php echo CHtml::errorSummary($form); ?>
+        
+                <?php if(Yii::app()->user->hasFlash('recoveryMessage')): ?>
+                <div class="success">
+                <?php echo Yii::app()->user->getFlash('recoveryMessage'); ?>
+                </div>
+                <?php else: ?>
 
-<div class="form">
-<?php echo CHtml::beginForm(); ?>
+                <div class="inputwrapper animate1 bounceIn">
+                    <h4 style="margin-bottom: 10px; color: #0866c6;">Restore Password:</h4>
+                </div>
 
-	<?php echo CHtml::errorSummary($form); ?>
-	
-	<div class="row">
-		<?php echo CHtml::activeLabel($form,'login_or_email'); ?>
-		<?php echo CHtml::activeTextField($form,'login_or_email') ?>
-		<p class="hint"><?php echo UserModule::t("Please enter your login or email addres."); ?></p>
-	</div>
-	
-	<div class="row submit">
-		<?php echo CHtml::submitButton(UserModule::t("Restore")); ?>
-	</div>
+                <div class="inputwrapper animate2 bounceIn">
+                    <?php echo CHtml::activeTextField($form,'login_or_email',array('required'=>'required','placeholder'=>'Enter Username or Email')) ?>
+                </div>
 
-<?php echo CHtml::endForm(); ?>
-</div><!-- form -->
-<?php endif; ?>
+                <div class="inputwrapper animate3 bounceIn">
+                    <?php echo CHtml::submitButton(UserModule::t("Restore"),array('class'=>'custom-login-btn')); ?>
+                </div>
+        <?php echo CHtml::endForm(); ?>
+        <?php endif; ?>
+    </div><!--loginpanelinner-->
+</div><!--loginpanel-->

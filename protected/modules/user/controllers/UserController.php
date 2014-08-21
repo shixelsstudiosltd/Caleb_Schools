@@ -6,7 +6,7 @@ class UserController extends Controller
 	 * @var CActiveRecord the currently loaded data model instance.
 	 */
 	private $_model;
-        public $layout='//layouts/front';
+        public $layout='//layouts/dashboard';
         
 	/**
 	 * @return array action filters
