@@ -54,7 +54,7 @@ h4 { font-size: 16px; }
 
 body {
 	background: url(../images/leftpanelbg.png) repeat-y 0 0; font-size: 12px;
-	font-family: 'RobotoRegular', 'Helvetica Neue', Helvetica, sans-serif;overflow: hidden; }
+	font-family: 'RobotoRegular', 'Helvetica Neue', Helvetica, sans-serif; }
 body.errorpage { background: #fff url(../images/bg1.png);  }
 body.loginpage { background: #efefef; }
 
@@ -107,7 +107,7 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 .login-alert .alert { font-size: 11px; text-align: center; padding: 5px 0; border: 0; }
 
 .loginfooter {
-		  font-size: 11px; color: rgba(51, 46, 46, 0.5); position: absolute; position: fixed; bottom: 0; left: 0;
+		  font-size: 11px; color: rgba(51, 46, 46, 0.5);  bottom: 0; left: 0;
 		  width: 100%; text-align: center; font-family: arial, sans-serif !important; padding: 5px 0; }
 
 /*** HEADER ***/
@@ -1903,3 +1903,8 @@ margin: 2% 10% 0 6%;
 
 .errorSummary ul li{margin-left: 15px;}
 
+.registrationLinear{ position: relative; top: -280px; left: -50%; background: #fff; padding: 4% 7%; }
+
+.loginpanelinner .logo { text-align: center; padding: 10px 0; } .logo { text-align: center; padding: 10px 0; }
+
+.hint {color: #e18d9a !important;}

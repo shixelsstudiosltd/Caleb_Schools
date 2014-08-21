@@ -20,7 +20,7 @@ $this->layout = "//layouts/front";
                 <?php else: ?>
 
                 <div class="inputwrapper animate1 bounceIn">
-                    <h4 style="margin-bottom: 10px; color: #0866c6;">Restore Password:</h4>
+                    <h4 style="margin-bottom: 10px; color: #0866c6; font-weight: bolder;">Restore Password:</h4>
                 </div>
 
                 <div class="inputwrapper animate2 bounceIn">
