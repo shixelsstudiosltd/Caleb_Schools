@@ -1,4 +1,5 @@
-<?php $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Profile");
+<?php echo "1";
+$this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Profile");
 $this->breadcrumbs=array(
 	UserModule::t("Profile"),
 );
