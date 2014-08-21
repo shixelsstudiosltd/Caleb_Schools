@@ -1,17 +1,17 @@
 <div class="logo header-top-left">
-        <img src=<?php echo Yii::app()->request->baseUrl; ?>"/images/header-top-left.jpg" alt="" />
+        <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header-top-left.jpg" alt="" />
 </div>
 
 <div class="headerinner">
     <ul class="headmenu">
         <li class="odd">
             <div class="logo">
-                <a href="#"><img src=<?php echo Yii::app()->request->baseUrl; ?>"/images/logo.jpg" alt="" /></a>
+                <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.jpg" alt="" /></a>
             </div>
         </li>
         <li class="right">
             <div class="userloggedinfo">
-                <img src=<?php echo Yii::app()->request->baseUrl; ?>"/images/photos/header-temp-image.png" alt="user-image" />
+                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/photos/header-temp-image.png" alt="user-image" />
                 <div class="userinfo">
                     <p>Jola Ogunsola</p>
                 </div>
