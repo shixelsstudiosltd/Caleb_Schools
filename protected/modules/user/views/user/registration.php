@@ -23,7 +23,9 @@
                 )); 
         ?>
         <div class="logo animate0 bounceIn">
-            <img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo.png" alt="" />
+            <a href="<?php echo Yii::app()->baseUrl;?>/">
+                <img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo.png" alt="" />
+            </a>
         </div>
         
         <?php if(Yii::app()->user->hasFlash('registration')): ?>
