@@ -82,6 +82,17 @@ class User extends CActiveRecord
             $relations['profile'] = array(self::HAS_ONE, 'Profile', 'user_id');
         return $relations;
 	}
+          public function getFullName()
+    {
+
+        return $this->username;
+    }
+    public function getSuggest($q) {
+    $c = new CDbCriteria();
+    $c->addSearchCondition('username', $q, true, 'OR');
+    $c->addSearchCondition('email', $q, true, 'OR');
+    return $this->findAll($c);
+}
 
 	/**
 	 * @return array customized attribute labels (name=>label)

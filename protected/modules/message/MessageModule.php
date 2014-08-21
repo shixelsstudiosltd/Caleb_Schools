@@ -43,7 +43,11 @@ class MessageModule extends CWebModule
 			'message.components.*',
 		));
 	}
+  public function getFullName()
+    {
 
+        return $this->username;
+    }
 	public function beforeControllerAction($controller, $action)
 	{
 		if (Yii::app()->user->isGuest) {
