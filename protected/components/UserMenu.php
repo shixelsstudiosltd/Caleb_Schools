@@ -21,7 +21,7 @@ class UserMenu extends CWidget {
             $this->render("menuteacher");
         }
         else
-        if(Yii::app()->user->checkParent())
+        if(Yii::app()->user->checkGuardian())
         {
             $this->render("menuparent");
         }

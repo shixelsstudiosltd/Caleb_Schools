@@ -8,8 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Caleb Portal',
-
-	// preloading 'log' component
+        'defaultController' => 'user/login',
 	'preload'=>array(
             'log',
              'input',
@@ -165,9 +164,9 @@ return array(
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
-				/*array(
+				array(
 					 'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
-				),*/
+				),
 				// uncomment the following to show log messages on web pages
 				/*
 				array(
