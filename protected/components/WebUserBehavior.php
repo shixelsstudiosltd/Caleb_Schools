@@ -76,14 +76,14 @@ class WebUserBehavior extends CBehavior
         }
         return 0; 
     }
-     public function checkParent()
+     public function checkGuardian()
     {
         $role = Rights::getAssignedRoles(Yii::app()->user->Id);
         if(!empty($role))
         {
             foreach($role as $r)
             {
-                if ($r->name=='parent')
+                if ($r->name=='guardian')
                 {
                  return 1;   
                 }

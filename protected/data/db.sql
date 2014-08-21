@@ -78,7 +78,7 @@ CREATE TABLE `authassignment` (
 
 LOCK TABLES `authassignment` WRITE;
 /*!40000 ALTER TABLE `authassignment` DISABLE KEYS */;
-INSERT INTO `authassignment` VALUES ('Admin','1',NULL,'N;');
+INSERT INTO `authassignment` VALUES ('Admin','1',NULL,'N;'),('guardian','8',NULL,'N;'),('student','6',NULL,'N;'),('teacher','7',NULL,'N;');
 /*!40000 ALTER TABLE `authassignment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -904,7 +904,7 @@ CREATE TABLE `profiles` (
   `firstname` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`user_id`),
   CONSTRAINT `user_profile_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -913,7 +913,7 @@ CREATE TABLE `profiles` (
 
 LOCK TABLES `profiles` WRITE;
 /*!40000 ALTER TABLE `profiles` DISABLE KEYS */;
-INSERT INTO `profiles` VALUES (4,'',''),(5,'','');
+INSERT INTO `profiles` VALUES (6,'',''),(7,'',''),(8,'','');
 /*!40000 ALTER TABLE `profiles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1222,7 +1222,7 @@ CREATE TABLE `user` (
   UNIQUE KEY `email` (`email`),
   KEY `status` (`status`),
   KEY `superuser` (`superuser`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1231,7 +1231,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'admin','fe01ce2a7fbac8fafaed7c982a04e229','webmaster@example.com','','2014-06-01 04:18:23','2014-08-19 08:17:49',1,1,'ahash','1d905200f3b07f5f632cd315acfc68fd5a9bab7e',NULL,NULL,29,'::1',NULL,'ce197d8fb2234d2818104e460f68c0e3',NULL,NULL,'40e9aaad8997df9ca519dfd4286595a03cdc128e'),(2,'demo','fe01ce2a7fbac8fafaed7c982a04e229','demo@example.com','099f825543f7850cc038b90aaff39fac','2014-06-01 04:18:23','2014-08-19 05:32:40',0,1,NULL,NULL,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,'mushahidh','70ca3372dcc56a677b18172a1fb3e1c7043ceb52','mushahidh@yahoo.com','','2014-07-21 06:13:08','0000-00-00 00:00:00',0,1,'ahash','1d905200f3b07f5f632cd315acfc68fd5a9bab7e',NULL,NULL,6,'::1',NULL,'2e7e6f32fc5b9ecf843b6f87a3a3d619','2014-07-21 16:13:08','2014-07-22 14:11:24','40e9aaad8997df9ca519dfd4286595a03cdc128e'),(4,'mushahidh224','c36ca09b3a210780263446a3c3ec6382','mushahidh224@yahoo.com','105bbdaa0db3fe38379fd2f285886d9c','2014-08-18 11:33:07','0000-00-00 00:00:00',0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,'mushahid','4c9bfb54e51012dc202f769c5d89ecfb','mushahidh224@kkk.com','3e17c2d864e94f60012d89014d88d8d3','2014-08-18 12:36:15','2014-08-19 05:42:56',1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `user` VALUES (1,'admin','fe01ce2a7fbac8fafaed7c982a04e229','webmaster@example.com','','2014-06-01 04:18:23','2014-08-21 05:20:05',1,1,'ahash','1d905200f3b07f5f632cd315acfc68fd5a9bab7e',NULL,NULL,29,'::1',NULL,'ce197d8fb2234d2818104e460f68c0e3',NULL,NULL,'40e9aaad8997df9ca519dfd4286595a03cdc128e'),(2,'demo','fe01ce2a7fbac8fafaed7c982a04e229','demo@example.com','099f825543f7850cc038b90aaff39fac','2014-06-01 04:18:23','2014-08-19 05:32:40',0,1,NULL,NULL,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(6,'student','cd73502828457d15655bbd7a63fb0bc8','student@ncat.edu','8db7b804f13985b069d523c408bbdb17','2014-08-21 07:43:20','2014-08-21 05:39:05',0,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(7,'teacher','8d788385431273d11e8b43bb78f3aa41','teacher@cba.sch.ng','c129ba1d307d58e2505cacb7d7008489','2014-08-21 07:48:21','2014-08-21 05:38:35',0,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(8,'guardian','d85362faae75ddbec33d4870191c72e9','guardian@gmail.com','f95351c1a40822ea65c6ccc4d5eb513e','2014-08-21 07:52:15','2014-08-21 05:39:38',0,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1244,4 +1244,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-19 16:20:03
+-- Dump completed on 2014-08-21 13:44:55
