@@ -1,5 +1,5 @@
 <div class="logo header-top-left">
-        <img src="images/header-top-left.jpg" alt="" />
+        <img src=<?php echo Yii::app()->request->baseUrl; ?>"/images/header-top-left.jpg" alt="" />
 </div>
 
 <div class="headerinner">
