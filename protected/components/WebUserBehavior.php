@@ -99,7 +99,7 @@ class WebUserBehavior extends CBehavior
         {
             foreach($role as $r)
             {
-                if ($r->name=='admin')
+                if ($r->name=='Admin')
                 {
                  return 1;   
                 }
