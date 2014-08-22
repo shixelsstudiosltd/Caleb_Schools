@@ -1,6 +1,6 @@
 <div class="leftmenu">        
     <ul class="nav nav-tabs nav-stacked">
-        <li class="active"><a href="dashboard.html"><span class="iconfa-home"></span>Admin Dashboard</a></li>
+        <li class="active"><a href="#"><span class="iconfa-home"></span>Admin Dashboard</a></li>
         <li><a href="#"><span class="iconfa-book"></span> Users</a></li>
         <li><a href="#"><span class="iconfa-envelope"></span> Messages</a></li>
         <li><a href="#"><span class="iconfa-cog"></span> Settings</a></li>

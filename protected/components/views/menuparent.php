@@ -1,6 +1,6 @@
 <div class="leftmenu">        
     <ul class="nav nav-tabs nav-stacked">
-        <li class="active"><a href="dashboard.html"><span class="iconfa-home"></span>Guardian Dashboard</a></li>
+        <li class="active"><a href="#"><span class="iconfa-home"></span>Guardian Dashboard</a></li>
         <li><a href="#"><span class="iconfa-book"></span> Courses</a></li>
         <li><a href="#"><span class="iconfa-group"></span> Teachers</a></li>
         <li><a href="#"><span class="iconfa-bar-chart"></span> Assessments</a></li>

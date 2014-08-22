@@ -16,9 +16,5 @@
     
 <?php echo $content; ?>
 
-<div class="loginfooter">
-    <p>&copy; 2014. Caleb Portal. All Rights Reserved.</p>
-</div>
-
 </body>
 </html>

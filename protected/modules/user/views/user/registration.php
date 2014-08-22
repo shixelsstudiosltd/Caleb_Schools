@@ -5,21 +5,13 @@
 	UserModule::t("Registration"),
     );
 ?>
-
-<h1><?php echo UserModule::t("Registration"); ?></h1>
-
-<?php if(Yii::app()->user->hasFlash('registration')): ?>
-<div class="success">
-<?php echo Yii::app()->user->getFlash('registration'); ?>
-</div>
-<?php else: ?>
-
 <style>
     .mb { margin-bottom: 10px;}
+    .cc {color:#000 !important; font-size: 15px !important;}
 </style>
 
 <div class="loginpanel">
-    <div class="loginpanelinner">
+    <div class="registrationLinear">
         <?php $form=$this->beginWidget('UActiveForm', array(
                 'id'=>'registration-form',
                 'enableAjaxValidation'=>true,
@@ -31,23 +23,32 @@
                 )); 
         ?>
         <div class="logo animate0 bounceIn">
-            <img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo.png" alt="" />
+            <a href="<?php echo Yii::app()->baseUrl;?>/">
+                <img src="<?php echo Yii::app()->request->baseUrl;?>/images/logo.png" alt="" />
+            </a>
         </div>
+        
+        <?php if(Yii::app()->user->hasFlash('registration')): ?>
+        <div class="success">
+        <?php echo Yii::app()->user->getFlash('registration'); ?>
+        </div>
+        <?php else: ?>
+
         
         <?php echo $form->errorSummary(array($model,$profile)); ?>
         
-        <div class="inputwrapper animate1 bounceIn">
-            <h4 style="margin-bottom: 10px; color: #0866c6;">Registration:</h4>
+        <div class="inputwrapper bounceIn">
+            <h4 style="margin-bottom: 10px; color: #0866c6; font-weight: bolder;">Registration:</h4>
         </div>
 	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
 	
-	<div class="inputwrapper">
+	<div class="mb">
 	<?php echo $form->labelEx($model,'username'); ?>
 	<?php echo $form->textField($model,'username'); ?>
 	<?php echo $form->error($model,'username'); ?>
 	</div>
 	
-	<div class="inputwrapper">
+	<div class="mb">
 	<?php echo $form->labelEx($model,'password'); ?>
 	<?php echo $form->passwordField($model,'password'); ?>
 	<?php echo $form->error($model,'password'); ?>
@@ -56,14 +57,14 @@
 	</p>
 	</div>
 	
-	<div class="inputwrapper">
+	<div class="mb">
 	<?php echo $form->labelEx($model,'verifyPassword'); ?>
 	<?php echo $form->passwordField($model,'verifyPassword'); ?>
 	<?php echo $form->error($model,'verifyPassword'); ?>
 	</div>
 	
-	<div class="inputwrapper">
-	<?php echo $form->labelEx($model,'email'); ?>
+	<div class="mb">
+	<?php echo $form->labelEx($model,'email',array('class'=>'cc')); ?>
 	<?php echo $form->textField($model,'email'); ?>
 	<?php echo $form->error($model,'email'); ?>
 	</div>
@@ -73,7 +74,7 @@
 		if ($profileFields) {
 			foreach($profileFields as $field) {
 			?>
-	<div class="inputwrapper">
+	<div class="mb">
 		<?php echo $form->labelEx($profile,$field->varname); ?>
 		<?php 
 		if ($widgetEdit = $field->widgetEdit($profile)) {
@@ -93,8 +94,8 @@
 		}
 ?>
 	<?php if (UserModule::doCaptcha('registration')): ?>
-	<div class="inputwrapper">
-		<?php echo $form->labelEx($model,'verifyCode'); ?>
+	<div class="mb">
+		<?php echo $form->labelEx($model,'verifyCode',array('class'=>'cc')); ?>
 		
 		<?php $this->widget('CCaptcha'); ?>
 		<?php echo $form->textField($model,'verifyCode'); ?>
