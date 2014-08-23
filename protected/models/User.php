@@ -76,11 +76,7 @@ class User extends CActiveRecord
 			'teacher' => array(self::HAS_ONE, 'Teacher', 'teacher_id'),
 		);
 	}
-    public function getFullName()
-    {
-
-        return $this->username;
-    }
+  
 
 
 	/**
