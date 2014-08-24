@@ -4,7 +4,7 @@
          <li class="dropdown"><a href="#"><span class="iconfa-book"></span>Manage Users</a>
             <ul>
                 <li><?php echo CHtml::link('Add User',array('')); ?></li>          
-                  <li><?php echo CHtml::link('Manage Users',array('')); ?></li>
+                  <li><?php echo CHtml::link('Manage Users',array('')); ?></li>        
                 
             </ul>
         </li>
@@ -39,9 +39,7 @@
         <li class="dropdown"><a href="#"><span class="iconfa-cog"></span> Settings</a>
          <ul>
                 <li><?php echo CHtml::link('View Profile',array('course/admin')); ?></li>
-                <li><?php echo CHtml::link('Update Profile',array('course/create')); ?></li>
-             
-             
+                <li><?php echo CHtml::link('Update Profile',array('course/create')); ?></li>   
             </ul>
         </li>
         <li class="empty-nav"><a href="#"></a></li>
